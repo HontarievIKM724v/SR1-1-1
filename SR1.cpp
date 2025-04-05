@@ -5,7 +5,7 @@ using namespace std;
 
 struct BankAccount {
     string name;
-    unsigned short number;
+    string number;
     double balance;
 };
 
@@ -71,7 +71,6 @@ int main() {
 
         cout << "\n\tNumber of bank account: " << accounts[i].number;
 
-        cout << "\n\tBalance: " << accounts[i].balance;
 
     }
     cout << endl << endl;
@@ -80,7 +79,7 @@ int main() {
             
         cout << "\n Enter the account number you want to interact with: ";
         cin >> c;
-        cout << "\nWhat would you like to do (enter a number): \n\t1 - Deposit money into the account \n\t2 - Withdraw money from the account \n\t3 - Show account balance \n\t4 - Exit the program\n\t";
+        cout << "\nWhat would you like to do (enter a number): \n\t1 - Deposit money into the account \n\t2 - Withdraw money from the account \n\t3 - Show account balance \n\t4 - Exit the program\n\t\n\n";
         cin >> x;
         switch (x)
             {
