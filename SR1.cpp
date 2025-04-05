@@ -9,25 +9,9 @@ struct BankAccount {
     double balance;
 };
 
-
-void deposit(BankAccount* user) {
-    cout << "\nEnter the amount you want to deposit: ";
-    double a;
-    cin >> a;
-    user->balance += a;
-    cout << "\nDeposit successful. Current account balance: " << user->balance;
-}
-void withdraw(BankAccount* user) {
-    cout << "\nEnter the amount you want to withdraw: ";
-    double a;
-    cin >> a;
-    user->balance -= a;
-    cout << "\nAccount updated. Current account balance: " << user->balance;
-}
-
-void displayTheBalance(BankAccount* user) {
-    cout << "\nCurrent account balance: " << user->balance;
-}
+void deposit(BankAccount* user);
+void withdraw(BankAccount* user);
+void displayTheBalance(BankAccount* user);
 
 int main() {
     cout << "Enter number of accounts: ";
@@ -106,4 +90,24 @@ int main() {
 
     delete[] accounts;
 
+}
+
+void deposit(BankAccount* user) {
+    cout << "\nEnter the amount you want to deposit: ";
+    double a;
+    cin >> a;
+    user->balance += a;
+    cout << "\nDeposit successful. Current account balance: " << user->balance;
+}
+
+void withdraw(BankAccount* user) {
+    cout << "\nEnter the amount you want to withdraw: ";
+    double a;
+    cin >> a;
+    user->balance -= a;
+    cout << "\nAccount updated. Current account balance: " << user->balance;
+}
+
+void displayTheBalance(BankAccount* user) {
+    cout << "\nCurrent account balance: " << user->balance;
 }
